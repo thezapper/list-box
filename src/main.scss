@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
+
+@font-face {
+  font-family: 'Overpass';
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-stack:'Overpass', sans-serif;
+$body-text-color: #202020;
+body {
+  font: 100% $font-stack;
+  color: $body-text-color;
+  margin: 0;
+  padding: 0;
+  //font-size: $small-font!important;
+}
+
+.downloadList
+{
+  box-shadow:0px 0px 5px 2px #999;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.titleBar
+{
+  position: relative;
+}
+
+.downloadButton
+{
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  margin-left: 40px;
+}
+.downloadIcon
+{
+  position: absolute;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+td {position: relative;}
+th
+{
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+tr { 
+  border-top: thin solid #eeeeee;}
+tr:hover {background-color: #ddd;}
+.rowSelect 
+{
+  position: relative;
+  background-color: #94e494;
+}
+
+.rowClear 
+{
+  position: relative;
+  background-color:none
+}
+
+.colNames
+{
+  //text-align: left;
+  margin: 10px 10px 10px 10px;
+}
+
+.table
+{
+  border-collapse: collapse;
+  position: relative;
+  width: 100%;
+}
+
+.vCentre
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+$dotSize: 20px;
+.availableDot
+{
+  box-sizing: border-box;
+  position: absolute;
+  width: $dotSize;
+  height: $dotSize;
+  border: 1px rgba($color: rgb(17, 167, 17), $alpha: 1.0) solid;
+  background-color: #7F7;
+  border-radius: $dotSize / 2;
+  top: 50%;
+  left: -$dotSize * 1.2;
+  margin-top: -$dotSize / 2;
+}
