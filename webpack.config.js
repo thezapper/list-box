@@ -11,23 +11,21 @@ var config = {
     filename: 'bundle.js'
   },
   watchOptions: {
-      // Necessary to get reasonable behavior from "watch" on Windows.
-      aggregateTimeout: 500,
-      poll: 500
+    // Necessary to get reasonable behavior from "watch" on Windows.
+    aggregateTimeout: 500,
+    poll: 500
   },
-  module : {
-    rules : [
+  module: {
+    rules: [
       {
-        test : /\.jsx?/,
-        include : APP_DIR,
-        loader : 'babel-loader',
-        query: {
-            presets: ["@babel/preset-env"]
-        }
+        test: /\.jsx?/,
+        include: APP_DIR,
+        exclude: /node_modules/,
+        use: ['babel-loader']
       },
       {
         test: /\.scss$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"]
+        use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
   }
